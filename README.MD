@@ -12,17 +12,35 @@ https://gist.github.com/NSG650/d718fcf5aa78a407783e3404d7b54128
 https://gist.github.com/NSG650/aac65399bbe74519636efc0a651c0425  
 https://github.com/VoidSec/Exploit-Development/blob/master/windows/x64/kernel/crucial_Ballistix_MOD_Utility_v.2.0.2.5/crucial_Ballistix_MOD_Utility_v.2.0.2.5_memory_dump_PoC.cpp  
 
-Download link before they took it down...  
+Download link before EVGA took it down...  
 https://storage.cdn.evga.com/software/EVGA_Precision_X1_1.0.4.0.exe  
+
+File.io download link (expires Nov 9, 2025)  
+https://file.io/SSidBPffxU82  
 
 Check status of driver  
 ```powershell  
 Get-WmiObject -Class Win32_SystemDriver | Where-Object { $_.Name -like "*WinRing0*" }
 ```  
 
+Install driver (admin cmd.exe)  
+```  
+sc create WinRing0_1_2_0 type= kernel start= demand binPath= "C:\<path to driver>\WinRing0x64.sys"
+```  
+
+Start driver  
+```powershell  
+Start-Service -Name WinRing0_1_2_0
+```  
+
 Stop driver  
 ```powershell  
 Stop-Service -Name WinRing0_1_2_0
+```  
+
+Remove driver (admin cmd.exe)  
+```  
+sc delete WinRing0_1_2_0
 ```  
 
 Further reading  
