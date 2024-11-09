@@ -25,11 +25,6 @@ Stop driver
 Stop-Service -Name WinRing0_1_2_0
 ```  
 
-Remove driver  
-```  
-pnputil /delete-driver "C:\<path to driver>\WinRing0_1_2_0.sys" /uninstall
-```  
-
 Further reading  
 https://www.cyberark.com/resources/threat-research-blog/inglourious-drivers-a-journey-of-finding-vulnerabilities-in-drivers  
 
