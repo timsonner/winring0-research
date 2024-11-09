@@ -9,12 +9,13 @@ https://medium.com/@matterpreter/cve-2020-14979-local-privilege-escalation-in-ev
 POCs:  
 https://github.com/CrackerCat/WinRing0-poc  
 https://gist.github.com/NSG650/d718fcf5aa78a407783e3404d7b54128  
+https://gist.github.com/NSG650/aac65399bbe74519636efc0a651c0425  
 
 Download link before they took it down...  
 https://storage.cdn.evga.com/software/EVGA_Precision_X1_1.0.4.0.exe  
 
 Check status of driver  
-```  
+```powershell  
 Get-WmiObject -Class Win32_SystemDriver | Where-Object { $_.Name -like "*WinRing0*" }
 ```  
 
