@@ -80,6 +80,10 @@ class Program
                 Console.WriteLine($"Protect: 0x{mbi.Protect:X}");
                 Console.WriteLine($"Type: 0x{mbi.Type:X}");
                 Console.WriteLine();
+                Console.WriteLine($"State: {mbi.State}");
+                Console.WriteLine($"Protect: {mbi.Protect}");
+                Console.WriteLine($"Type: {mbi.Type}");
+                Console.WriteLine();
 
                 // Move to the next memory region
                 address = new IntPtr(mbi.BaseAddress.ToInt64() + mbi.RegionSize.ToInt64());
