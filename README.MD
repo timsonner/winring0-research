@@ -23,12 +23,17 @@ Check status of driver
 Get-WmiObject -Class Win32_SystemDriver | Where-Object { $_.Name -like "*WinRing0*" }
 ```  
 
-Install driver (admin cmd.exe)  
-```  
-sc create WinRing0_1_2_0 type= kernel start= demand binPath= "C:\<path to driver>\WinRing0x64.sys"
+Check status of driver  
+```powershell  
+Get-Service -Name WinRing0_1_2_0
 ```  
 
-compile install-driver.exe  
+Install driver (cmd.exe)  
+```  
+sc.exe create WinRing0_1_2_0 type= kernel start= demand binPath= "C:\<path to>\WinRing0x64.sys"
+```  
+
+Compile install-driver.exe (microsoft developer console for visual studio)  
 ```  
 csc install-driver.cs
 ```  
@@ -48,9 +53,9 @@ Stop driver
 Stop-Service -Name WinRing0_1_2_0
 ```  
 
-Remove driver (admin cmd.exe)  
+Remove driver (cmd.exe)  
 ```  
-sc delete WinRing0_1_2_0
+sc.exe delete WinRing0_1_2_0
 ```  
 
 Remove Driver (powerShell)  
