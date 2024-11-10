@@ -28,6 +28,16 @@ Install driver (admin cmd.exe)
 sc create WinRing0_1_2_0 type= kernel start= demand binPath= "C:\<path to driver>\WinRing0x64.sys"
 ```  
 
+compile install-driver.exe  
+```  
+csc install-driver.cs
+```  
+
+Check registry key for driver  
+```  
+reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinRing0_1_2_0"
+```  
+
 Start driver  
 ```powershell  
 Start-Service -Name WinRing0_1_2_0
@@ -41,6 +51,17 @@ Stop-Service -Name WinRing0_1_2_0
 Remove driver (admin cmd.exe)  
 ```  
 sc delete WinRing0_1_2_0
+```  
+
+Remove Driver (powerShell)  
+```powershell  
+$service = Get-WmiObject -Class Win32_SystemDriver -Filter "Name = 'WinRing0_1_2_0'"
+if ($service) {
+    $service.Delete()
+    Write-Output "Service 'WinRing0_1_2_0' deleted successfully."
+} else {
+    Write-Output "Service 'WinRing0_1_2_0' not found."
+}
 ```  
 
 Further reading  
