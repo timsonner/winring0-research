@@ -8,6 +8,8 @@ https://medium.com/@matterpreter/cve-2020-14979-local-privilege-escalation-in-ev
 
 POCs:  
 https://github.com/VoidSec/Exploit-Development/blob/master/windows/x64/kernel/crucial_Ballistix_MOD_Utility_v.2.0.2.5/crucial_Ballistix_MOD_Utility_v.2.0.2.5_memory_dump_PoC.cpp  
+
+
 https://github.com/zeze-zeze/WindowsKernelVuln/blob/master/CVE-2023-1679/bin/ReadWriteArbitraryPhysicalMemory.cpp  
 
 Download link before EVGA took it down...  
