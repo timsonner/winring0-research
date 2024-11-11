@@ -7,10 +7,8 @@ CVE-2020-14979
 https://medium.com/@matterpreter/cve-2020-14979-local-privilege-escalation-in-evga-precisionx1-cf63c6b95896  
 
 POCs:  
-https://github.com/CrackerCat/WinRing0-poc  
-https://gist.github.com/NSG650/d718fcf5aa78a407783e3404d7b54128  
-https://gist.github.com/NSG650/aac65399bbe74519636efc0a651c0425  
 https://github.com/VoidSec/Exploit-Development/blob/master/windows/x64/kernel/crucial_Ballistix_MOD_Utility_v.2.0.2.5/crucial_Ballistix_MOD_Utility_v.2.0.2.5_memory_dump_PoC.cpp  
+https://github.com/zeze-zeze/WindowsKernelVuln/blob/master/CVE-2023-1679/bin/ReadWriteArbitraryPhysicalMemory.cpp  
 
 Download link before EVGA took it down...  
 https://storage.cdn.evga.com/software/EVGA_Precision_X1_1.0.4.0.exe  
@@ -71,6 +69,12 @@ if ($service) {
 
 Further reading  
 https://www.cyberark.com/resources/threat-research-blog/inglourious-drivers-a-journey-of-finding-vulnerabilities-in-drivers  
+https://www.pinvoke.dev/kernel32/deviceiocontrol  
+
+Honorary mentions:  
+https://github.com/CrackerCat/WinRing0-poc  
+https://gist.github.com/NSG650/d718fcf5aa78a407783e3404d7b54128  
+https://gist.github.com/NSG650/aac65399bbe74519636efc0a651c0425  
 
 
 
