@@ -6,6 +6,9 @@ https://voidsec.com/crucial-mod-utility-lpe-cve-2021-41285/
 CVE-2020-14979  
 https://medium.com/@matterpreter/cve-2020-14979-local-privilege-escalation-in-evga-precisionx1-cf63c6b95896  
 
+CVE-2023-1679
+https://nvd.nist.gov/vuln/detail/CVE-2023-1679  
+
 POCs:  
 https://github.com/VoidSec/Exploit-Development/blob/master/windows/x64/kernel/crucial_Ballistix_MOD_Utility_v.2.0.2.5/crucial_Ballistix_MOD_Utility_v.2.0.2.5_memory_dump_PoC.cpp  
 
